@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hello_world/navigation/secondPage.dart';
+import 'package:hello_world/near/navigation/secondPage.dart';
+import 'package:hello_world/near/provider/provider_task.dart';
 
 class NavigationTaskScreen extends StatelessWidget {
   @override
@@ -54,7 +55,16 @@ class NavigationTaskScreen extends StatelessWidget {
                     ),
                   );
                 },
-              )
+              ),
+              RaisedButton(
+                child: Text('provider学习'),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new ProviderTask()));
+                },
+              ),
             ],
           ),
         ));

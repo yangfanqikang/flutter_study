@@ -28,6 +28,12 @@ class _SecondPageState extends State<SecondPage> {
                 onPressed: () {
                   Navigator.of(context).popAndPushNamed('/third');
                 },
+              ),
+              RaisedButton(
+                child: Text('返回方式三'),
+                onPressed: () {
+                  Navigator.of(context).pushReplacementNamed('/third');
+                },
               )
             ],
           ),

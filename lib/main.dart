@@ -2,9 +2,10 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 
-import 'home.dart';
-import 'navigation/secondPage.dart';
-import 'navigation/thirdPage.dart';
+import 'LaunchScreen.dart';
+// import 'home.dart';
+import 'near/navigation/secondPage.dart';
+import 'near/navigation/thirdPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FlowerApp(),
+      home: LaunchScreen(),
       routes: {
         '/second': (BuildContext context) {
           return SecondPage(content: '12344');
