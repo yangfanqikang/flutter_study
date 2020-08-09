@@ -1,13 +1,20 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:hello_world/provider/company_list.dart';
+import 'package:provider/provider.dart';
 
 import 'LaunchScreen.dart';
 // import 'home.dart';
 import 'near/navigation/secondPage.dart';
 import 'near/navigation/thirdPage.dart';
 
-void main() => runApp(new MyApp());
+// void main() => runApp(new MyApp());
+
+void main() => runApp(MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_) => CompanyListProvider())],
+      child: MyApp(),
+    ));
 
 class MyApp extends StatelessWidget {
   @override

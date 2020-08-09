@@ -62,8 +62,8 @@ class Company {
   static Company fromMap(Map map) {
     return new Company(
         logo: map['logo_url'],
-        name: map['mark_name'],
-        location: map['short_word'],
+        name: map['market_name'],
+        location: map['single_word'],
         type: map['type'],
         size: map['tag'],
         employee: map['market_id'],
